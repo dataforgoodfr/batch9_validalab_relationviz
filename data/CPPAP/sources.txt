@@ -1,0 +1,12 @@
+http://www.cppap.fr/publications-dinformations-politique-et-generale/
+Revues imprimées:
+- Publications-IPG-pluralisme-au-27-février-2020.pdf
+- Liste-des-publications-39bisA-CGI-au-6-février-2020.pdf
+
+Liste des services de presse en ligne reconnus:
+sur https://www.data.gouv.fr/fr/datasets/liste-des-services-de-presse-en-ligne-reconnus/
+https://www.data.gouv.fr/fr/datasets/r/cb5799fb-adc9-41b0-99f1-c2a10b5e19ce
+liste-des-services-de-presse-en-ligne-reconnus.csv ou liste-des-services-de-presse-en-ligne-reconnus.json
+
+
+

@@ -1,0 +1,326 @@
+id,nom,typeLibelle,typeCode,rangChallenges,milliardaireForbes,mediaType,mediaPeriodicite,mediaEchelle,commentaire,db_sitename
+1,Claude Perdriel,Personne physique,1,339.0,,,,,,
+2,Sophia Publications,Personne morale,2,,,,,,,
+3,Groupe Perdriel,Personne morale,2,,,,,,,
+4,L’histoire,Média,3,,,GPE,Mensuel,,,lhistoire.fr
+5,Historia,Média,3,,,GPE,Mensuel,,,historia.fr
+6,Challenges,Média,3,,,GPE,Hebdomadaire,,,challenges.fr
+7,Sciences & Avenir,Média,3,,,GPE,Mensuel,,,sciencesetavenir.fr
+8,L’Opinion,Média,3,,,GPE,Quotidien,,,lopinion.fr
+9,Prisa,Personne morale,2,,,,,,,
+10,Xavier Niel,Personne physique,1,16.0,,,,,,
+11,Matthieu Pigasse,Personne physique,1,,,,,,,
+12,Les Nouvelles Éditions indépendantes,Personne morale,2,,,,,,,
+13,Le Nouveau Monde,Personne morale,2,,,,,,,
+14,Le Monde libre,Personne morale,2,,,,,,,
+15,Le Monde SA,Personne morale,2,,,,,,,
+16,L’Obs,Média,3,,,GPE,Hebdomadaire,,,nouvelobs.com
+17,Prier,Média,3,,,GPE,Mensuel,,,magazine-prier.fr
+18,"M, le magazine du Monde",Média,3,,,GPE,Hebdomadaire,,,
+19,Le Monde,Média,3,,,GPE,Hebdomadaire,,,lemonde.fr
+20,Télérama,Média,3,,,GPE,Mensuel,,,telerama.fr
+21,Courrier international,Média,3,,,GPE,Hebdomadaire,,,courrierinternational.com
+22,Le Monde des religions,Média,3,,,GPE,Mensuel,,,lemondedesreligions.fr
+23,La Vie,Média,3,,,GPE,Hebdomadaire,,,lavie.fr
+24,Le Monde diplomatique,Média,3,,,GPE,Mensuel,,,monde-diplomatique.fr
+25,Manière de voir,Média,3,,,GPE,Bimestriel,,,manieredevoir.com
+26,Huffingtonpost.fr,Média,3,,,Site,,,Pure player,huffingtonpost.fr
+27,AOL,Personne morale,2,,,,,,,
+28,Huffington Post,Personne morale,2,,,,,,,
+30,Radio Nova,Média,3,,,Radio,,National,,
+31,Les Inrockuptibles,Média,3,,,GPE,Hebdomadaire,,,lesinrocks.com
+32,Vice.com,Média,3,,,Site,,,Pure player,
+33,Les Amis du Monde diplomatique,Personne morale,2,,,,,,,
+34,Association Günter-Holzmann,Personne morale,2,,,,,,,
+35,Famille Dassault,Personne physique,1,7.0,,,,,,
+36,Groupe Dassault,Personne morale,2,,,,,,,
+37,Groupe Figaro,Personne morale,2,,,,,,,
+38,Le Figaro,Média,3,,,GPE,Quotidien,,,lefigaro.fr
+39,Figaro Magazine,Média,3,,,GPE,Hebdomadaire,,,
+40,Le Particulier,Média,3,,,GPE,Mesuel,,,
+41,La Lettre de l’Expansion,Média,3,,,GPE,Mensuel,,,lalettredelexpansion.com
+42,Bernard Arnault,Personne physique,1,1.0,,,,,,
+43,LVMH,Personne morale,2,,,,,,,
+44,Le Parisien,Média,3,,,GPE,Quotidien,,,leparisien.fr
+45,Le Parisien Week-End,Média,3,,,GPE,Hebdomadaire,,,
+46,Le Parisien économie,Média,3,,,GPE,Hebdomadaire,,,
+47,Aujourd’hui en France,Média,3,,,GPE,Quotidien,,,
+48,Groupe Les Échos,Personne morale,2,,,,,,,
+49,Les Échos,Média,3,,,GPE,Quotidien,,,lesechos.fr
+50,Investir,Média,3,,,GPE,Hebdomadaire,,,
+51,Investir Magazine,Média,3,,,GPE,Mensuel,,,
+52,Les Échos Week-End,Média,3,,,GPE,Hebdomadaire,,,
+53,Radio Classique,Média,3,,,Radio,National,,,radioclassique.fr
+54,Famille Bettencourt,Personne physique,1,3.0,,,,,,
+55,Nicolas Beytout,Personne physique,1,,,,,,,
+56,Patrick Drahi,Personne physique,1,10.0,,,,,,
+57,Altice,Personne morale,2,,,,,,,
+58,Altice France,Personne morale,2,,,,,,,
+59,L’Express,Média,3,,,GPE,Hebdomadaire,,,lexpress.fr
+60,Libération,Média,3,,,GPE,Quotidien,,,liberation.fr
+61,NextRadioTV,Personne morale,2,,,,,,,
+62,BFM TV,Média,3,,,Télévision,,,Gratuit,bfmtv.com
+63,RMC Découverte,Média,3,,,Télévision,,,Gratuit,
+64,RMC,Média,3,,,Radio,,National,,
+65,BFM Business,Média,3,,,Radio,,National,,
+66,Numéro 23,Média,3,,,Télévision,,,Gratuit,
+67,Arnaud Lagardère,Personne physique,1,389.0,,,,,,
+68,Qatar Investment Authority,Personne morale,2,,,,,,,
+69,Lagardère SCA,Personne morale,2,,,,,,,
+70,Lagardère Active,Personne morale,2,,,,,,,
+71,Le Journal du dimanche,Média,3,,,GPE,Hebdomaire,,,lejdd.fr
+72,Paris Match,Média,3,,,GPE,Hebdomaire,,,parismatch.com
+73,Gulli,Média,3,,,Télévision,,,Gratuit,gulli.fr
+74,Europe 1,Média,3,,,Radio,,National,,europe1.fr
+75,RFM,Média,3,,,Radio,,National,,
+76,Virgin Radio,Média,3,,,Radio,,National,,
+77,Vincent Bolloré,Personne physique,1,12.0,,,,,,
+78,Financière de l’Odet,Personne morale,2,,,,,,,
+79,Bolloré,Personne morale,2,,,,,,,
+80,CNews,Média,3,,,GPE,Quotidien,,,cnews.fr
+81,Vivendi,Personne morale,2,,,,,,,
+82,Canal +,Média,3,,,Télévision,,,Semi-payant,mycanal.fr
+83,C8,Média,3,,,Télévision,,,Gratuit,
+84,CNews,Média,3,,,Télévision,,,Gratuit,cnews.fr
+85,CStar,Média,3,,,Télévision,,,Gratuit,
+86,Iskandar Safa,Personne physique,1,90.0,,,,,,
+87,Privinvest,Personne morale,2,,,,,,,
+88,Groupe Valmonde,Personne morale,2,,,,,,,
+89,Valeurs actuelles,Média,3,,,GPE,Hebdomadaire,,,valeursactuelles.com
+90,Mieux vivre votre argent,Média,3,,,GPE,Mensuel,,,mieuxvivre-votreargent.fr
+91,Yves de Chaisemartin,Personne physique,1,,,,,,,
+92,Daniel Křetínský,Personne physique,1,,oui,,,,,
+93,Czech Media Invest,Personne morale,2,,,,,,,
+94,Marianne,Média,3,,,GPE,Hebdomadaire,,,marianne.net
+95,François Pinault,Personne physique,1,6.0,,,,,,
+96,Artémis,Personne morale,2,,,,,,,
+97,Groupe Sebdo-Le Point,Personne morale,2,,,,,,,
+98,Groupe L’Agefi,Personne morale,2,,,,,,,
+99,Point de vue,Média,3,,,GPE,Hebdomadaire,,,pointdevue.fr
+100,Le Point,Média,3,,,GPE,Hebdomadaire,,,lepoint.fr
+101,L’Agefi hebdo,Média,3,,,GPE,Hebdomadaire,,,agefi.fr
+102,Famille Mohn,Personne physique,1,,oui,,,,,
+103,Bertelsmann,Personne morale,2,,,,,,,
+104,Gruner + Jahr,Personne morale,2,,,,,,,
+105,RTL Group,Personne morale,2,,,,,,,
+106,Prisma Media,Personne morale,2,,,,,,,
+107,Capital,Média,3,,,GPE,Mensuel,,,capital.fr
+108,Management,Média,3,,,GPE,Mensuel,,,
+109,Harvard Business Review,Média,3,,,GPE,Bimestriel,,,hbrfrance.fr
+110,Groupe M6,Personne morale,2,,,,,,,
+111,M6,Média,3,,,Télévision,,,Gratuit,6play.fr
+112,W9,Média,3,,,Télévision,,,Gratuit,
+113,6ter,Média,3,,,Télévision,,,Gratuit,
+114,RTL,Média,3,,,Radio,National,,,rtl.fr
+115,RTL2,Média,3,,,Radio,National,,,
+116,Fun Radio,Média,3,,,Radio,National,,,
+117,Georges Ghosn,Personne physique,1,,,,,,,
+118,Ghosn Capital,Personne morale,2,,,,,,,
+119,VSD,Média,3,,,GPE,Mensuel,,,vsd.fr
+120,Martin et Olivier Bouygues,Personne physique,1,33.0,,,,,,
+121,Bouygues,Personne morale,2,,,,,,,
+122,Groupe TF1,Personne morale,2,,,,,,,
+123,TF1,Média,3,,,Télévision,,,Gratuit,tf1.fr
+124,TFX,Média,3,,,Télévision,,,Gratuit,
+125,LCI,Média,3,,,Télévision,,,Gratuit,lci.fr
+126,TF1 Séries Films,Média,3,,,Télévision,,,Gratuit,
+127,TMC,Média,3,,,Télévision,,,Gratuit,
+128,République française,État,4,,,,,,,
+129,Länder de République fédérale d’Allemagne,État,4,,,,,,,
+130,Renault,Personne morale,2,,,,,,,
+131,La Chaîne parlementaire,Média,3,,,Télévision,,,Gratuit,
+132,Public Sénat,Média,3,,,Télévision,,,Gratuit,publicsenat.fr
+133,France Médias Monde,Personne morale,2,,,,,,,
+134,France Télévision,Personne morale,2,,,,,,,
+135,Radio France,Personne morale,2,,,,,,,
+136,Arte France,Personne morale,2,,,,,,,
+137,Monte Carlo Doualiya,Média,3,,,Radio,,International,,
+138,Radio France International,Média,3,,,Radio,,International,,rfi.fr
+139,France 24,Média,3,,,Télévision,,International,,
+140,TV5 Monde,Média,3,,,Télévision,,International,,tv5monde.com
+141,France 2,Média,3,,,Télévision,,,Gratuit,france.tv
+142,France 3,Média,3,,,Télévision,,,Gratuit,france.tv
+143,France 5,Média,3,,,Télévision,,,Gratuit,france.tv
+144,France 4,Média,3,,,Télévision,,,Gratuit,france.tv
+145,France Ô,Média,3,,,Télévision,,,Gratuit,france.tv
+147,France Inter,Média,3,,,Radio,,National,,franceinter.fr
+148,France Musique,Média,3,,,Radio,,National,,francemusique.com
+149,France Culture,Média,3,,,Radio,,National,,franceculture.fr
+150,FIP,Média,3,,,Radio,,National,,fip.fr
+151,France Bleu,Média,3,,,Radio,,National,,francebleu.fr
+152,France Info,Média,3,,,Radio,,National,,francetvinfo.fr
+153,Mouv’,Média,3,,,Radio,,National,,mouv.fr
+154,Arte,Média,3,,,Télévision,,,Gratuit,arte.tv
+155,ARD / ZDF,Personne morale,2,,,,,,,
+156,Arte Deutschland TV GmbH,Personne morale,2,,,,,,,
+157,Les Augustins de l’Assomption,Personne morale,2,,,,,,,
+158,Bayard,Personne morale,2,,,,,,,
+159,La Croix,Média,3,,,GPE,Quotidien,,,
+160,Pèlerin,Média,3,,,GPE,Hebdomadaire,,,lepelerin.com
+161,Notre temps,Média,3,,,GPE,Mensuel,,,notretemps.com
+162,Jean-Paul Baudecroux,Personne physique,1,,,,,,,
+163,NRJ Group,Personne morale,2,,,,,,,
+164,NRJ 12,Média,3,,,Télévision,,,Gratuit,
+165,Chérie 25,Média,3,,,Télévision,,,,
+166,NRJ,Média,3,,,Radio,,National,,
+167,Rire et Chansons,Média,3,,,Radio,,National,,
+168,Chérie FM,Média,3,,,Radio,,National,,
+169,Nostalgie,Média,3,,,Radio,,National,,
+170,Famille Hutin,Personne physique,1,,,,,,,
+171,Famille Hurbain,Personne physique,1,,non,,,,,
+172,Crédit Agricole Nord de France,Personne morale,2,,,,,,,
+173,Association pour le soutien des principes de la démocratie humaniste,Personne morale,2,,,,,,,
+174,Groupe SIPA - Ouest,Personne morale,2,,,,,,,
+175,Ouest France,Média,3,,,Régional,Quotidien,Régional,,ouest-france.fr
+176,Le Courrier de l’Ouest,Média,3,,,Régional,Quotidien,Régional,,courrierdelouest.fr
+177,Le Maine libre,Média,3,,,Régional,Quotidien,Régional,,lemainelibre.fr
+178,Presse-Océan,Média,3,,,Régional,Quotidien,Régional,,presseocean.fr
+179,La Presse de la Manche,Média,3,,,Régional,Quotidien,Régional,,lapressedelamanche.fr
+180,Publi Hebdos,Média,3,,,Régional,Quotidien et hebdomadaire,Régional,,publihebdos.com
+181,Sofiouest,Personne morale,2,,,,,,,
+182,20 Minutes,Média,3,,,GPE,Quotidien,,,20minutes.fr
+183,Groupe Rossel,Personne morale,2,,,,,,,
+184,Groupe Rossel La Voix,Personne morale,2,,,,,,,
+185,La Voix du Nord SA,Personne morale,2,,,,,,,
+186,La Voix du Nord,Média,3,,,Régional,Quotidien,Régional,,lavoixdunord.fr
+187,Nord éclair,Média,3,,,Régional,Quotidien,Régional,,nordeclair.fr
+188,Nord Littoral,Média,3,,,Régional,Quotidien,Régional,,nordlittoral.fr
+189,Courrier picard,Média,3,,,Régional,Quotidien,Régional,,courrier-picard.fr
+190,L’aisne Nouvelle,Média,3,,,Régional,Quotidien,Régional,,aisnenouvelle.fr
+191,L’Union - L’Ardennais,Média,3,,,Régional,Quotidien,Régional,,lardennais.fr
+192,L’Est-éclair,Média,3,,,Régional,Quotidien,Régional,,lest-eclair.fr
+193,L’Avenir de l’Artois,Média,3,,,Régional,Hebdomadaire,Régional,,lavenirdelartois.fr
+194,Les Echos du Touquet,Média,3,,,Régional,Hebdomadaire,Régional,,lesechosdutouquet.fr
+195,Le Journal des Flandres,Média,3,,,Régional,Hebdomadaire,Régional,,lejournaldesflandres.fr
+196,Le Messager,Média,3,,,Régional,Hebdomadaire,Régional,,lemessager.fr
+197,L’Essor savoyard,Média,3,,,Régional,Hebdomadaire,Régional,,lessorsavoyard.fr
+198,Le Pays gessien,Média,3,,,Régional,Hebdomadaire,Régional,,lepaysgessien.fr
+199,La Tribune républicaine,Média,3,,,Régional,Hebdomadaire,Régional,,latribunerepublicaine.fr
+200,La Savoie,Média,3,,,Régional,Hebdomadaire,Régional,,lasavoie.fr
+201,Le Phare Dunkerquois,Média,3,,,Régional,Hebdomadaire,Régional,,lepharedunkerquois.fr
+202,La Semaine dans le Boulonnais,Média,3,,,Régional,Hebdomadaire,Régional,,lasemainedansleboulonnais.fr
+203,Le Réveil de Berck,Média,3,,,Régional,Hebdomadaire,Régional,,lereveildeberck.fr
+204,Le Journal de Montreuil,Média,3,,,Régional,Hebdomadaire,Régional,,lejournaldemontreuil.fr
+205,L’indicateur,Média,3,,,Régional,Hebdomadaire,Régional,,lindicateurdesflandres.fr
+206,L’Echo de la Lys,Média,3,,,Régional,Hebdomadaire,Régional,,lechodelalys.fr
+207,Crédit Mutuel,Personne morale,2,,,,,,,
+208,Groupe EBRA,Personne morale,2,,,,,,,
+209,L’Est républicain,Média,3,,,Régional,Quotidien,Régional,,estrepublicain.fr
+210,Le Républicain lorrain,Média,3,,,Régional,Quotidien,Régional,,republicain-lorrain.fr
+211,DNA,Média,3,,,Régional,Quotidien,Régional,,dna.fr
+212,Vosges Matin,Média,3,,,Régional,Quotidien,Régional,,vosgesmatin.fr
+213,L’Alsace,Média,3,,,Régional,Quotidien,Régional,,lalsace.fr
+214,Le Bien public,Média,3,,,Régional,Quotidien,Régional,,bienpublic.com
+215,Le Journal de Saône-et-Loire,Média,3,,,Régional,Quotidien,Régional,,lejsl.com
+216,Le Progrès,Média,3,,,Régional,Quotidien,Régional,,leprogres.fr
+217,Le Dauphiné libéré,Média,3,,,Régional,Quotidien,Régional,,ledauphine.com
+218,Vaucluse Matin,Média,3,,,Régional,Quotidien,Régional,,
+219,Le Journal de la Haute-Marne,Média,3,,,Régional,Quotidien,Régional,,
+220,Fondation Varenne,Personne morale,2,,,,,,,
+221,Famille Saint-Cricq,Personne physique,1,,,,,,,
+222,Groupe La Montagne,Personne morale,2,,,,,,,
+223,La Montagne,Média,3,,,Régional,Quotidien,Régional,,lamontagne.fr
+224,Le Populaire du centre,Média,3,,,Régional,Quotidien,Régional,,lepopulaire.fr
+225,Le Journal du centre,Média,3,,,Régional,Quotidien,Régional,,
+226,Le Berry républicain,Média,3,,,Régional,Quotidien,Régional,,leberry.fr
+227,L’Yonne Républicaine,Média,3,,,Régional,Quotidien,Régional,,lyonne.fr
+228,L’Echo Républicain,Média,3,,,Régional,Quotidien,Régional,,lechorepublicain.fr
+229,Courrier du Loiret,Média,3,,,Régional,Hebdomadaire,Régional,,
+230,L’Eclaireur du Gâtinais,Média,3,,,Régional,Hebdomadaire,Régional,,
+231,Régional de Cosne,Média,3,,,Régional,Hebdomadaire,Régional,,leregional.fr
+232,L’Echo Charitois,Média,3,,,Régional,Hebdomadaire,Régional,,
+233,Pays Roannais,Média,3,,,Régional,Hebdomadaire,Régional,,
+234,La Liberté,Média,3,,,Régional,Hebdomadaire,Régional,,laliberte.ch
+235,Journal de Gien,Média,3,,,Régional,Hebdomadaire,Régional,,
+236,La République du Centre,Média,3,,,Régional,Quotidien,Régional,,larep.fr
+237,Groupe NRCO,Personne morale,2,,,,,,,
+238,Nouvelle République du Centre,Média,3,,,Régional,Quotidien,Régional,,lanouvellerepublique.fr
+239,Centre Presse,Média,3,,,Régional,Quotidien,Régional,,centre-presse.fr
+240,TV Tours,Média,3,,,Régional,,Régional,Télévision,tvtours.fr
+241,Famille Baylet,Personne physique,1,,,,,,,
+242,Groupe La Dépêche,Personne morale,2,,,,,,,
+243,La Dépêche du midi,Média,3,,,Régional,Quotidien,Régional,,ladepeche.fr
+244,Le Petit Bleu,Média,3,,,Régional,Quotidien,Régional,,petitbleu.fr
+245,La Nouvelle République des Pyrénées,Média,3,,,Régional,Quotidien,Régional,,nrpyrenees.fr
+246,Le Villefranchois,Média,3,,,Régional,Hebdomadaire,Régional,,
+247,La Gazette du Comminges,Média,3,,,Régional,Hebdomadaire,Régional,,
+248,Les Journaux du midi,Personne morale,2,,,,,,,
+249,Midi libre,Média,3,,,Régional,Quotidien,Régional,,midilibre.fr
+250,L’Indépendant,Média,3,,,Régional,Quotidien,Régional,,lindependant.fr
+251,Centre Presse Aveyron,Média,3,,,Régional,Quotidien,Régional,,centrepresseaveyron.fr
+252,Famille Lemoine,Personne physique,1,,,,,,,
+253,Groupe Sud Ouest,Personne morale,2,,,,,,,
+254,Sud Ouest,Média,3,,,Régional,Quotidien,Régional,,sudouest.fr
+255,Charente Libre,Média,3,,,Régional,Quotidien,Régional,,charentelibre.fr
+256,Dordogne Libre,Média,3,,,Régional,Quotidien,Régional,,dordognelibre.fr
+257,Haute Saintonge,Média,3,,,Régional,Hebdomadaire,Régional,,hautesaintonge.fr
+258,Haute Gironde,Média,3,,,Régional,Hebdomadaire,Régional,,hautegironde.fr
+259,Le Résistant,Média,3,,,Régional,Hebdomadaire,Régional,,leresistant.fr
+260,L’Hebdo de Charente-Maritime,Média,3,,,Régional,Hebdomadaire,Régional,,lhebdo17.fr
+261,La Dépêche du Bassin,Média,3,,,Régional,Hebdomadaire,Régional,,ladepechedubassin.fr
+262,Le Journal du Médoc,Média,3,,,Régional,Hebdomadaire,Régional,,lejournaldumedoc.fr
+263,Pyrénées Presse,Personne morale,2,,,,,,,
+264,La République des Pyrénées,Média,3,,,Régional,Quotidien,Régional,,larepubliquedespyrenees.fr
+265,Libération Champagne,Média,3,,,Régional,Quotidien,Régional,,liberation-champagne.fr
+266,Édouard Coudurier,Personne physique,1,,,,,,,
+267,Groupe Télégramme,Personne morale,2,,,,,,,
+268,Le Télégramme,Média,3,,,Régional,Quotidien,Régional,,letelegramme.fr
+269,Le Poher,Média,3,,,Régional,Quotidien,Régional,,lepoher.fr
+270,Tébéo,Média,3,,,Régional,,Régional,Télévision,tebeo.bzh
+271,Tébésud,Média,3,,,Régional,,Régional,Télévision,tebesud.bzh
+272,Le Mensuel de Rennes,Média,3,,,Régional,Mensuel,Régional,,lemensuel.com
+273,Sept Jours à Brest,Média,3,,,Régional,Hebdomadaire,Régional,,
+274,Le Journal des entreprises,Média,3,,,Régional,Mensuel,Régional,,lejournaldesentreprises.com
+275,Bretagne magazine,Média,3,,,Régional,Hebdomadaire,Régional,,
+276,Bernard Tapie,Personne physique,1,,,,,,,
+277,Nethys,Personne morale,2,,,,,,,
+278,Publifin,Personne morale,2,,,,,,,
+279,Province de Liège,État,4,,,,,,,
+280,Groupe La Provence,Personne morale,2,,,,,,,
+281,Nice-Matin,Média,3,,,Régional,Quotidien,Régional,,nicematin.com
+282,Corse Matin,Média,3,,,Régional,Quotidien,Régional,,corsematin.com
+283,La Provence,Média,3,,,Régional,Quotidien,Régional,,laprovence.com
+284,Jean-Louis Louvel,Personne physique,1,,,,,,,
+285,Société Normande d’Information et de Communication,Personne morale,2,,,,,,,
+286,Paris-Normandie,Média,3,,,Régional,Quotidien,Régional,,paris-normandie.fr
+287,Havre Libre,Média,3,,,Régional,Quotidien,Régional,,havre-libre.fr
+288,Le Progrès de Fécamp,Média,3,,,Régional,Quotidien,Régional,,
+289,Liberté Dimanche,Média,3,,,Régional,Hebdomadaire,Régional,,
+290,Havre Dimanche,Média,3,,,Régional,Hebdomadaire,Régional,,
+291,Normandie Dimanche,Média,3,,,Régional,Hebdomadaire,Régional,,
+292,Philippe Hersant,Personne physique,1,,,,,,,
+293,Éditions Suisses Holding,Personne morale,2,,,,,,,
+294,Groupe Hersant Média,Personne morale,2,,,,,,,
+295,Groupe Filanosa,Personne morale,2,,,,,,,
+296,Rhône Média,Personne morale,2,,,,,,,
+297,La Côte (Nyon),Média,3,,,Suisse,,,,
+298,L’Express (Neuchâtel),Média,3,,,Suisse,,,,
+299,L’Impartial (La Chaux-de-Fonds),Média,3,,,Suisse,,,,limpartial.fr
+300,Le Nouvelliste,Média,3,,,Suisse,,,,lenouvelliste.fr
+301,La Gazette de Martigny,Média,3,,,Suisse,,,,
+302,Le Journal de Sierre,Média,3,,,Suisse,,,,
+303,France Antilles,Média,3,,,Régional,Quotidien,Régional,,guadeloupe.franceantilles.fr
+304,France Guyane,Média,3,,,Régional,Quotidien,Régional,,franceguyane.fr
+305,Abdoul Cadjee,Personne physique,1,,,,,,,
+306,Le Journal de l’Île de la Réunion,Média,3,,,Régional,Quotidien,Régional,,
+307,Benjamin et Ariane de Rothschild,Personne physique,1,22.0,,,,,,
+308,Lampsane Investissement SA,Personne morale,2,,,,,,,
+309,Slate.fr,Média,3,,,Site,,,Pure player,
+310,Jean-Sébastien Ferjou,Personne physique,1,,,,,,,
+311,Pierre Guyot,Personne physique,1,,,,,,,
+312,Gérard Lignac,Personne physique,1,,,,,,,
+313,Atlantico.fr,Média,3,,,Site,,,Pure player,atlantico.fr
+314,Franck Julien,Personne physique,1,,,,,,,
+315,Edi Invest,Personne morale,2,,,,,,,
+316,Jean Christophe Tortora,Personne physique,1,,,,,,,
+317,Laurent Alexandre,Personne physique,1,,,,,,,
+318,Hima Groupe,Personne morale,2,,,,,,,
+319,La Tribune,Média,3,,,Site,,,,
+320,i24 News,Média,3,,,Télévision,,,,i24news.tv
+321,Elle,Média,3,,,,Hebdomadaire,Féminin,,
+322,Le Nouveau Magazine littéraire,Média,3,,,GPE,Mensuel,,,nouveau-magazine-litteraire.com
+323,Madison Cox,Personne physique,1,,,,,,,
+324,Alain Weil,Personne physique,1,368.0,,,,,,
+325,Groupe L’Opinon,Personne morale,2,,,,,,,
+326,Ken Fisher,Personne physique,1,,oui,,,,,
+327,RMC Story,Média,3,,,Télévision,,,Gratuit,
