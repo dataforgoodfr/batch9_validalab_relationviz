@@ -2,11 +2,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <style>
-    h1,p, h6,div{
+    h1, h6{
         text-align:center
     }
     body{
-        text-align:center;
         width: 300px;
         height:450px;
         background-color: honeydew;
@@ -14,18 +13,21 @@
     .limit{
     word-wrap: break-word;
 }
+    #element1 {display:inline-block;margin-right:10px;} 
+    #put_link {display:inline-block;}
+    #element3 {margin-right:10px; width:70px; background-color:blue; text-align:center}  
 </style>
 <div class="container">
 <div class="card " >
     <div class="card-body">
-      <h2 class="card-title">Validalab
-        <div class="logo-well"><a href="\"><img src="icons/logo_validalab_48.png" alt="logo_validalab"></a></div>
-      </h2>
+      <h2 id="element3">site</h2>  
+      <div class="logo-well" id="element1"><a href="\"><img src="icons/logo_validalab_48.png" alt="logo_validalab"></a></div>
+      <h2 class="card-link limit" id="put_link" style="color:#FF0000;"></h2>
       <h6 class="card-subtitle  text-muted" style="margin: 10px;">Lutte contre la desinformation</h6>
-      <p class="card-text mb-2" style="margin: 60px;">Vous visitez le site suivant:
+      <!-- <p class="card-text mb-2" style="margin: 60px;">Vous visitez le site suivant:
           <a class="card-link "><div class="card-link limit" id="put_link" style="color:#FF0000;"></div></a>
-      </p>
-      <div style="margin:20px"><a href="http://51.159.52.80:5000/" class="card-link" target="_blank">Visitez le site Validalab</a></div>
+      </p> -->
+      <div style="margin:60px"><a href="http://51.159.52.80:5000/" class="card-link" target="_blank">Visitez le site Validalab</a></div>
     </div>
 </div>
 </div>
