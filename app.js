@@ -174,6 +174,40 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
             div_11.innerHTML += news_data_5;
         })
             .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
+        
+        
+    fetch("http://51.159.52.80:5000/med_1/" + result_1)
+        .then(response => response.json())
+
+        .then(function(response) { 
+            var news_data_1 = ''
+            for (let i = 0; i < response.length; i++) {
+                news_data_1 += response[i]["e2.name"] + ' - ' 
+                }
+
+            
+            var div_4 = document.getElementById("put_link_4");
+            div_4.innerHTML += news_data_1;
+        })
+            .catch(error => alert("Erreur : " + error));
+        fetch("http://51.159.52.80:5000/med_2/" + result)
+            .then(response => response.json())
+    
+            .then(function(response) { 
+                var news_data_2 = '';
+                for (let i = 0; i < response.length; i++) {
+                    if(i<response.length-1){
+                        news_data_2 += response[i]["e.name"] + ' <-- ' ;
+                    }else{
+                        news_data_2 += response[i]["e.name"]   ; 
+                        }
+                    }
+    
+                
+                var div_5 = document.getElementById("put_link_5");
+                div_5.innerHTML += news_data_2;
+            })
+                .catch(error => alert("Erreur : " + error));
     
     // use `url` here inside the callback because it's asynchronous!
 });
