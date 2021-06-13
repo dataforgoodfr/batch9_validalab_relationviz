@@ -116,6 +116,7 @@
                         highlightNodeSearch(site_name);
                         //console.log("fonc3", site_name)
                         if (!data || data.length == 0) return;
+                        console.log(data);
                         data.forEach(function (media) {
                             $("<tr><td class='media'>" + media.site_name+ "</td><td>" + media.type + "</td><td>" + media.cite + "</td><td>" + media.estcite + "</td><td>" + media.title + "</td></tr>").appendTo(t)
                                     //.click(function() { console.log("fonction2 ici:",$(this).find("td.media").text());})
@@ -131,6 +132,7 @@
                     function (data) {
                         var t = $("table#results tbody").empty();
                         if (!data || data.length == 0) return;
+                        console.log(data);
                         data.forEach(function (media) {
                             $("<tr><td class='media'>" + media.site_name + "</td><td>" + media.type + "</td><td>" + media.entity + "</td><td>").appendTo(t)
                                     .click(function() { showLinkers($(this).find("td.media").text());})

@@ -6,6 +6,9 @@
     <title>Jo's Medias map</title>
     <style>
         body { margin:0px;top:50px;margin-right:0px;bottom:0;margin-left:0px; }
+	.sidebar {
+ 		 width: 300px;
+		}
     </style>
  
 </head>
@@ -46,9 +49,8 @@
         </div>
     </div>
 </div>
-
 <div class="row">
-    <div class="col-md-3">
+   <div class="col-lg-2">
         <div class="panel panel-default">
             <div class="panel-heading">Résultats de la recherche</div>
             <table id="results" class="table table-striped table-hover">
@@ -63,8 +65,7 @@
                 </tbody>
             </table>
         </div>
-    </div>
-    <div class="col-md-4">
+
         <div class="panel panel-default">
             <div class="panel-heading" id="title_details">Details</div>
             <table id="dname" class="table table-striped table-hover"></table>
@@ -79,16 +80,14 @@
                     <th>Nom</th>
                     <th>Type</th>
                     <th>Nb citations</th>
-                    <th>Nb contrecitations</th>
+                    <th>Nb contre-citat</th>
                 </tr>
                 </thead>
                 <tbody>
                 </tbody>
             </table>
         </div>
-    </div>
 
-    <div class="col-md-4">
         <div class="panel panel-default">
             <div class="panel-heading" id="title_entity">Entity</div>
             <table id="eMondiplo" class="table table-striped table-hover"></table>
@@ -96,9 +95,11 @@
             <table id="eSpiil" class="table table-striped table-hover"></table>
             <table id="eCPPAP" class="table table-striped table-hover"></table>
             <table id="eML" class="table table-striped table-hover"></table>
-        </div>
-    </div>
+         </div>
+ </div>
+<svg  id="key" class="col-lg-9" style='background-color: black ' ></svg> 
 </div>
+
  <div id="key"> 
     </div>
 
@@ -206,8 +207,6 @@
 }
 
 </style>
-<div id="key" class="container" style='background-color: black '>
-<svg class="container" style="overflow:hidden" ></svg> </div>
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>

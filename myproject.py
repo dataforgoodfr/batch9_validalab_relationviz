@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import os
 from json import dumps
-from flask import Flask, g, Response, request
+from flask import Flask, g, Response, request, jsonify
 
 from neo4j import GraphDatabase, basic_auth
 
@@ -479,6 +479,80 @@ def get_media(site_name):
     #            " ORDER BY prtot DESC LIMIT 3",
     #        {"site_name": nodename, "ent_name":entityname})
     #    resp = dumps([serialize_youtube_details(record) for record in results])
+
+@app.route("/med/<site_name>", methods = ['GET'])
+def get_media_1(site_name):
+    
+    db = get_db()
+    results = db.run("match (n {name:$site_name})-[:OWNED_BY]->(r:Entity)<-[:OWNED_BY]-(w:Wikipedia) return w.summary",
+                    {"site_name": site_name})
+            # {"site_name": nodename, "ent_name":entityname})
+    return jsonify((results.data())[0])
+@app.route("/med_1/<ent_name>", methods = ['GET'])
+def get_media_2(ent_name):
+    
+    db = get_db()
+    results = db.run("match (w:Website {name:$ent_name})-[r:OWNED_BY*]->(e)<-[:OWNED_BY*]-(e2:Entity) return e2.name",
+                    {"ent_name": ent_name})
+            # {"site_name": nodename, "ent_name":entityname})
+    return jsonify((results.data()))
+@app.route("/med_2/<ent_name>", methods = ['GET'])
+def get_media_3(ent_name):
+    
+    db = get_db()
+    results = db.run("match (w:Website {name:$ent_name})-[r:OWNED_BY*]->(e) return e.name",
+                    {"ent_name": ent_name})
+            # {"site_name": nodename, "ent_name":entityname})
+    return jsonify((results.data()))
+@app.route("/med_3/<ent_name>", methods = ['GET'])
+def get_media_4(ent_name):
+    
+    db = get_db()
+    results = db.run("match(w:Website{name:$ent_name})-[:OWNED_BY]->(e:Entity)<-[:OWNED_BY]-(wiki:Wikipedia) return wiki.genre,wiki.categories[0]",
+                    {"ent_name": ent_name})
+            # {"site_name": nodename, "ent_name":entityname})
+    return jsonify((results.data()))
+@app.route("/med_4/<ent_name>", methods = ['GET'])
+def get_media_5(ent_name):
+    
+    db = get_db()
+    results = db.run("match(w:Website{name:$ent_name})return w.ACPM_SiteGP_Rang as gR,w.`ACPM_SiteGP_Visites totales` as gV, w.ACPM_SitePro_Rang as pR,w.`ACPM_SitePro_Visites totales` as pV",
+                    {"ent_name": ent_name})
+            # {"site_name": nodename, "ent_name":entityname})
+    return jsonify((results.data()))
+@app.route("/med_5/<ent_name>", methods = ['GET'])
+def get_media_6(ent_name):
+    
+    db = get_db()
+    results = db.run("match(w:Website{name:$ent_name})-[:OWNED_BY]->(e:Entity)<-[:OWNED_BY]-(tw:Twitter) return tw.user_name,tw.followers_count",
+                    {"ent_name": ent_name})
+            # {"site_name": nodename, "ent_name":entityname})
+    return jsonify((results.data()))
+@app.route("/med_6/<ent_name>", methods = ['GET'])
+def get_media_7(ent_name):
+    
+    db = get_db()
+    results = db.run("match(w:Website{name:$ent_name})-[:OWNED_BY]->(e:Entity)<-[:OWNED_BY]-(yt:Youtube) return yt.user_name,yt.pro_subscriberCount,yt.url",
+                    {"ent_name": ent_name})
+            # {"site_name": nodename, "ent_name":entityname})
+    return jsonify((results.data()))
+@app.route("/med_7/<ent_name>", methods = ['GET'])
+def get_media_8(ent_name):
+    
+    db = get_db()
+    results = db.run("match(w:Website{name:$ent_name})-[:OWNED_BY]->(e:Entity)<-[:OWNED_BY]-(fb:Facebook) return fb.user_name",
+                    {"ent_name": ent_name})
+            # {"site_name": nodename, "ent_name":entityname})
+    return jsonify((results.data()))
+@app.route("/med_8/<ent_name>", methods = ['GET'])
+def get_media_9(ent_name):
+    
+    db = get_db()
+    results = db.run("match(w:Website{name:$ent_name})-[r:LINKS_TO_tot_bij]->(w2) return w2.name, w2.PageRanktot ORDER BY w2.PageRanktot desc ",
+                    {"ent_name": ent_name})
+            # {"site_name": nodename, "ent_name":entityname})
+    return jsonify((results.data()))
+
 
 
 if __name__ == '__main__':
