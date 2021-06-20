@@ -143,7 +143,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
             var vis = Math.round(response[0]["yt.pro_subscriberCount"] / 1000) + ' K';
             var alink = document.createElement("a");
             alink.href = response[0]["yt.url"];
-            alink.text = " @ " + response[0]["yt.user_name"];
+            alink.text = "@" + response[0]["yt.user_name"];
             alink.target = "_blank"
             news_data_5 = " - " + vis +"  Subscribers";
             document.getElementById('where_to_insert_1').appendChild(alink);
@@ -164,7 +164,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
             }else{
                 var alink = document.createElement("a");
                 alink.href = "https://www.facebook.com/" + response[0]["fb.user_name"];
-                alink.text = "Facebook compte " + response[0]["fb.user_name"];
+                alink.text = "@" + response[0]["fb.user_name"];
                 alink.target = "_blank"
                 news_data_5 = "  " ;
                 document.getElementById('where_to_insert_2').appendChild(alink);
@@ -202,6 +202,30 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
             
             var div_11 = document.getElementById("put_link_11");
             div_11.innerHTML += news_data_5;
+        })
+            .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
+        fetch(api_url + "/med_9/" + result_1)
+        .then(response => response.json())
+
+        .then(function(response) { 
+            var news_data_5 = '';
+            
+            // alert(JSON.stringify(response));
+            if (response[0] == null){
+                news_data_5 = "";
+            }else{
+                var l_1 = response.length
+                    for (let i = 0; i < l_1; i++) {
+                        news_data_5 += response[i]["r.name"] + ' - ' 
+                        }
+                
+                }
+                // news_data_5 = response[0]["w2.name"] 
+                            //   + response[2]["w2.name"] + '<br>' +
+                            //   response[3]["w2.name"] + response[4]["w2.name"] + response[5]["w2.name"]
+            
+            var div_11 = document.getElementById("put_link_12");
+            div_11.innerHTML += "<span style='background-color:blueviolet;'>" +  result_1 + " est recommande par " + "</span>" + "<br>" + news_data_5;
         })
             .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
 
