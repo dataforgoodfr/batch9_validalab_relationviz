@@ -1,4 +1,4 @@
-
+var api_url = "http://51.159.52.80:5000"
 chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
     var tab = tabs[0];
     var url = new URL(tab.url)
@@ -18,7 +18,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
     }
     var div_2 = document.getElementById('put_link_3');
     div_2.innerHTML = "<span>" + result + "</span>";
-    fetch("http://51.159.52.80:5000/med/" + result)
+    fetch(api_url + "/med/" + result)
         .then(response => response.json())
         .then(function(response) { 
             news_data = response["w.summary"];
@@ -28,7 +28,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
         .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
         
         
-    fetch("http://51.159.52.80:5000/med_1/" + result_1)
+    fetch(api_url + "/med_1/" + result_1)
         .then(response => response.json())
 
         .then(function(response) { 
@@ -42,14 +42,14 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
             div_4.innerHTML += news_data_1;
         })
             .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
-    fetch("http://51.159.52.80:5000/med_2/" + result)
+    fetch(api_url + "/med_2/" + result)
         .then(response => response.json())
 
         .then(function(response) { 
             var news_data_2 = '';
             for (let i = 0; i < response.length; i++) {
                 if(i<response.length-1){
-                    news_data_2 += response[i]["e.name"] + ' <== '  ;
+                    news_data_2 += response[i]["e.name"] + ' <span>&#8592;</span> '  ;
                 }else{
                     news_data_2 += response[i]["e.name"]   ; 
                     }
@@ -61,7 +61,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
         })
             .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
         
-    fetch("http://51.159.52.80:5000/med_3/" + result)
+    fetch(api_url + "/med_3/" + result)
         .then(response => response.json())
 
         .then(function(response) { 
@@ -87,7 +87,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
         })
             .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
     
-    fetch("http://51.159.52.80:5000/med_4/" + result)
+    fetch(api_url + "/med_4/" + result)
         .then(response => response.json())
 
         .then(function(response) { 
@@ -110,7 +110,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
             div_9.innerHTML += news_data_6.replace("|", "");
         })
             .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
-    fetch("http://51.159.52.80:5000/med_5/" + result)
+    fetch(api_url + "/med_5/" + result)
             .then(response => response.json())
     
             .then(function(response) { 
@@ -131,7 +131,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
                 div_10.innerHTML += news_data_5;
             })
                 .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
-    fetch("http://51.159.52.80:5000/med_6/" + result_1)
+    fetch(api_url + "/med_6/" + result_1)
     .then(response => response.json())
 
     .then(function(response) { 
@@ -143,7 +143,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
             var vis = Math.round(response[0]["yt.pro_subscriberCount"] / 1000) + ' K';
             var alink = document.createElement("a");
             alink.href = response[0]["yt.url"];
-            alink.text = "Chaine Youtube: " + response[0]["yt.user_name"];
+            alink.text = " @ " + response[0]["yt.user_name"];
             alink.target = "_blank"
             news_data_5 = " - " + vis +"  Subscribers";
             document.getElementById('where_to_insert_1').appendChild(alink);
@@ -153,7 +153,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
         div_11.innerHTML += news_data_5;
     })
         .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
-    fetch("http://51.159.52.80:5000/med_7/" + result_1)
+    fetch(api_url + "/med_7/" + result_1)
         .then(response => response.json())
     
         .then(function(response) { 
@@ -164,7 +164,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
             }else{
                 var alink = document.createElement("a");
                 alink.href = "https://www.facebook.com/" + response[0]["fb.user_name"];
-                alink.text = "@" + response[0]["fb.user_name"];
+                alink.text = "Facebook compte " + response[0]["fb.user_name"];
                 alink.target = "_blank"
                 news_data_5 = "  " ;
                 document.getElementById('where_to_insert_2').appendChild(alink);
@@ -174,6 +174,36 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
             div_11.innerHTML += news_data_5;
         })
             .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
-    
+    fetch(api_url + "/med_8/" + result_1)
+        .then(response => response.json())
+
+        .then(function(response) { 
+            var news_data_5 = '';
+            
+            // alert(JSON.stringify(response));
+            if (response[0] == null){
+                news_data_5 = "";
+            }else{
+                var l_1 = response.length
+                if (l_1>5){
+                    for (let i = 0; i < 5; i++) {
+                        news_data_5 += response[i]["w2.name"] + ' - ' 
+                        }
+                }else{
+                    for (let i = 0; i < l_1; i++) {
+                        news_data_5 += response[i]["w2.name"] + " - " 
+                        }
+                }
+                // news_data_5 = response[0]["w2.name"] 
+                            //   + response[2]["w2.name"] + '<br>' +
+                            //   response[3]["w2.name"] + response[4]["w2.name"] + response[5]["w2.name"]
+                
+            }
+            
+            var div_11 = document.getElementById("put_link_11");
+            div_11.innerHTML += news_data_5;
+        })
+            .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
+
     // use `url` here inside the callback because it's asynchronous!
 });
