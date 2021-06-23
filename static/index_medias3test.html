@@ -1,0 +1,435 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css"/>
+    <title>Jo's Medias map</title>
+</head>
+
+<body>
+
+<div role="navigation" class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-6">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <form role="search" class="navbar-form" id="search">
+                            <div class="form-group">
+                                <input type="text" value="Le Monde" placeholder="Search for Movie Title" class="form-control" name="search">
+                            </div>
+                            <button class="btn btn-default" type="submit">Search</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-header col-sm-6 col-md-6">
+                <div class="logo-well">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                    <img src="/static/Logo.png" alt="Jo's leading trust advising machine" id="logo">
+                    </a>
+                </div>
+                <div class="navbar-brand">
+                    <div class="brand">Jo's Medias map</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-5">
+        <div class="panel panel-default">
+            <div class="panel-heading">Résultats de la recherche</div>
+            <table id="results" class="table table-striped table-hover">
+                <thead>
+                <tr>
+                    <th>Media</th>
+                    <th>Released</th>
+                    <th>Tagline</th>
+                    <th>Test (remove)</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-7">
+        <div class="panel panel-default">
+            <div class="panel-heading" id="title">Détails</div>
+            <div class="row">
+                <div class="col-sm-4 col-md-4">
+                    <img src="" class="well" id="poster"/>
+                </div>
+                <div class="col-md-8 col-sm-8">
+                    <h4>The truc</h4>
+                    <ul id="crew">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+
+.links line {
+	stroke-opacity: 0.6;
+	stroke-width: 1px;
+}
+
+.nodes circle {
+	stroke: black	;
+	stroke-width: 2px;
+}
+
+.texts text {
+	pointer-events: none;
+	font: 14px sans-serif;
+	opacity: 1;
+}
+
+</style>
+<svg width="1200" height="600"></svg>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+
+//create somewhere to put the force directed graph
+
+var width = window.innerWidth
+var height = window.innerHeight
+var svg = d3.select('svg')
+	.append("svg")
+	.attr('width', width)
+	.attr('height', height)
+	.call(d3.zoom().on("zoom", function () {
+		svg.attr("transform", d3.event.transform)
+	}))
+	.append("g")
+
+var catColScale = d3.scaleOrdinal(d3.schemeCategory20);
+var contColLinkScale = d3.scaleLinear()
+    .domain([2, 100000])
+    .range(["orange", "red"]);
+var contLinkScale = d3.scaleLinear()
+        .domain([2, 100000])
+        .range([1, 10]);
+
+
+
+
+// Read data from JSON
+
+d3.json("/graph", function(error, graph){
+
+var baseNodes = graph.nodes
+var baseLinks = graph.links
+console.log(graph.nodes)
+console.log(graph.links)
+
+//var nodes = graph.nodes
+//var links = graph.links
+var nodes = baseNodes
+var links = baseLinks
+
+
+//set up the simulation and add forces
+
+// simulation setup with all forces
+var linkForce = d3
+	.forceLink()
+	//.strength(0.01)
+	//.iterations(1)
+	.id(function (link) { return link.index })
+	.distance(100);
+
+var chargeForce = d3
+	.forceManyBody()
+	//.distanceMax(200)
+    .strength(-300);
+
+var centerForce = d3
+	.forceCenter(width / 2, height / 2);
+
+var collisionForce = d3
+	.forceCollide()
+	.radius(function(d) {return d.size ; })
+    .strength(1)
+	.iterations(10);
+
+
+var simulation = d3
+	.forceSimulation()
+	.force('link', linkForce)
+	.force('charge', chargeForce)
+	.force('center', centerForce)
+	.force('collision', collisionForce)
+
+//add encompassing group for the zoom
+//var all = svg.append("all")
+//    .attr("class", "everything");
+
+//draw lines for the links (link)
+
+var linkElements,
+	nodeElements,
+	textElements
+
+// we use svg groups to logically group the elements together
+var linkGroup = svg.append('g').attr('class', 'links')
+var nodeGroup = svg.append('g').attr('class', 'nodes')
+var textGroup = svg.append('g').attr('class', 'texts')
+var selectedId
+
+//add drag capabilities
+var dragDrop = d3.drag()
+	.on('start', function (node) {
+		node.fx = node.x
+		node.fy = node.y
+	})
+	.on('drag', function (node) {
+		simulation.alphaTarget(0.7).restart()
+		node.fx = d3.event.x
+		node.fy = d3.event.y
+	})
+	.on('end', function (node) {
+		if (!d3.event.active) {
+			simulation.alphaTarget(0)
+		}
+		node.fx = null
+		node.fy = null
+	})
+
+
+
+/*********************** Functions *************************/
+
+
+// Color function
+function circleColour(d){
+	return catColScale(d.Community);
+	//return d.color;
+}
+
+function linkColour(d){
+    return contColLinkScale(d.count)
+	//return d.color;
+}
+
+function linkThick(d){
+    return contLinkScale(d.count)
+}
+
+// **********************************************************
+// Functions to higligh selections (neighbors from node )
+
+// helping functions for connectivity
+function getNeighbors(node) {
+  return baseLinks.reduce(function (neighbors, link) {
+      if (link.target.id === node.id) {
+        neighbors.push(link.source.id)
+      } else if (link.source.id === node.id) {
+        neighbors.push(link.target.id)
+      }
+      return neighbors
+    },
+    [node.id]
+  )
+}
+
+function isNeighborLink(node, link) {
+  return link.target.id === node.id || link.source.id === node.id
+}
+
+function isNeighborNode(node, link) {
+  return (Array.isArray(link) && link.indexOf(node.id) > -1)
+}
+
+
+
+// updates the colors of all nodes, texts and links depending on "neighboring status"
+function highlightNode(selectedNode) {
+  const neighbors = getNeighbors(selectedNode)
+  nodeElements
+	.style('stroke-width', node => isNeighborNode(node, neighbors) ? 6 : 2)
+    //.attr('fill', node => isNeighborNode(node, neighbors) ? 'blue' : circleColour(node))
+	.style('opacity', node => isNeighborNode(node, neighbors) ? 1 : 0.3)
+  textElements
+    //.attr('fill', node => isNeighborNode(node, neighbors) ? "blue" : "black")
+	//.style("font-weight", node => isNeighborNode(node, neighbors) ? "bold" : "normal")
+	.style('opacity', node => isNeighborNode(node, neighbors) ? 1 : 0.3)
+  linkElements
+	.style('stroke-width', link => isNeighborLink(selectedNode, link) ? 3 : 1)
+	.style('stroke-opacity', link => isNeighborLink(selectedNode, link) ? 0.8 : 0.3)
+    //.style('stroke', link => isNeighborLink(selectedNode, link) ? "blue" : "gray")
+}
+
+function unHighlightNode() {
+  nodeElements
+	.style('stroke-width', 2)
+    //.attr('fill', node => isNeighborNode(node, neighbors) ? 'blue' : circleColour(node))
+	.style('opacity', 1)
+  textElements
+    //.attr('fill', node => isNeighborNode(node, neighbors) ? "blue" : "black")
+	//.style("font-weight", node => isNeighborNode(node, neighbors) ? "bold" : "normal")
+	.style('opacity', 1)
+  linkElements
+	.style('stroke-width', 1)
+	.style('stroke-opacity', 0.6)
+    //.style('stroke', link => isNeighborLink(selectedNode, link) ? "blue" : "gray")
+
+}
+
+// select node is called on every click
+// we either update the data according to the selection
+// or reset the data if the same node is clicked twice
+function selectNode(selectedNode) {
+  if (selectedId === selectedNode.id) {
+    selectedId = undefined
+    resetData()
+    updateSimulation()
+  } else {
+    selectedId = selectedNode.id
+    updateData(selectedNode)
+    updateSimulation()
+  }
+}
+
+// this helper simple adds all nodes and links
+// that are missing, to recreate the initial state
+function resetData() {
+  var nodeIds = nodes.map(function (node) { return node.id })
+  baseNodes.forEach(function (node) {
+    if (nodeIds.indexOf(node.id) === -1) {
+      nodes.push(node)
+    }
+  })
+  links = baseLinks
+}
+
+// ***************************************************
+// Dynamic selection and display
+
+// diffing and mutating the data
+function updateData(selectedNode) {
+  var neighbors = getNeighbors(selectedNode)
+ var newNodes = baseNodes.filter(function (node) {
+    return neighbors.indexOf(node.id) > -1
+  })
+
+  var diff = {
+    removed: nodes.filter(function (node) { return newNodes.indexOf(node) === -1 }),
+   added: newNodes.filter(function (node) { return nodes.indexOf(node) === -1 })
+  }
+
+  diff.removed.forEach(function (node) { nodes.splice(nodes.indexOf(node), 1) })
+  diff.added.forEach(function (node) { nodes.push(node) })
+
+ links = baseLinks.filter(function (link) {
+   return link.target.id === selectedNode.id || link.source.id === selectedNode.id
+ })
+}
+
+
+// THIS ONE DELETE
+//function updateData(selectedNode) {
+  //var neighbors = getNeighbors(selectedNode)
+ // nodes = baseNodes.filter(function (node) {
+ //   return node.Component_ID ===  selectedNode.Component_ID
+ // })
+
+//  var diff = {
+//    removed: nodes.filter(function (node) { return newNodes.indexOf(node) === -1 }),
+//    added: newNodes.filter(function (node) { return nodes.indexOf(node) === -1 })
+//  }
+
+//  diff.removed.forEach(function (node) { nodes.splice(nodes.indexOf(node), 1) })
+//  diff.added.forEach(function (node) { nodes.push(node) })
+
+
+ // links = baseLinks.filter(function (link) {
+ //   return link.target.filter(function (id) {
+//		nodes.id ;
+//		})
+ // })
+//}
+
+
+function updateGraph() {
+  // links
+  linkElements = linkGroup.selectAll('line')
+    .data(links, function (link) {
+      return link.target.id + link.source.id
+    })
+  linkElements.exit().remove()
+  var linkEnter = linkElements
+    .enter().append('line')
+	.attr("class", "links")
+    .style('stroke-width', linkThick)
+    .attr('stroke', linkColour)
+  linkElements = linkEnter.merge(linkElements)
+
+  // nodes
+  nodeElements = nodeGroup.selectAll('circle')
+    .data(nodes, function (node) { return node.id })
+  nodeElements.exit().remove()
+  var nodeEnter = nodeElements
+    .enter()
+    .append('circle')
+	.attr("class", "nodes")
+    //.attr("r", 10)
+	.attr("r", function (d) { return d.size * 10; })
+    .attr("fill", circleColour)
+    .call(dragDrop)
+	.on('mouseover', highlightNode)
+	.on("mouseout", unHighlightNode)
+    .on('click', selectNode)
+  nodeElements = nodeEnter.merge(nodeElements)
+
+  // texts
+  textElements = textGroup.selectAll('text')
+    .data(nodes, function (node) { return node.id })
+  textElements.exit().remove()
+  var textEnter = textElements
+    .enter()
+    .append('text')
+	.attr('pointer-events', 'none')
+    .text(function (node) { return node.name })
+		.attr('pointer-events', 'none')
+		.attr("class", "texts")
+        .style("font-size", function (node) { return node.size *10 +10 })
+        //.style("font-size", function (d) {return d.size; })
+        .attr("dx",function (d) {return d.size ; })
+		.attr("dy", function (d) {return d.size /3; })
+		.attr('pointer-events', 'none')
+  textElements = textEnter.merge(textElements)
+}
+
+
+function updateSimulation() {
+  updateGraph()
+  simulation.nodes(nodes).on('tick', () => {
+    nodeElements
+      .attr('cx', function (node) { return node.x })
+      .attr('cy', function (node) { return node.y })
+    textElements
+      .attr('x', function (node) { return node.x })
+      .attr('y', function (node) { return node.y })
+    linkElements
+      .attr('x1', function (link) { return link.source.x })
+      .attr('y1', function (link) { return link.source.y })
+      .attr('x2', function (link) { return link.target.x })
+      .attr('y2', function (link) { return link.target.y })
+  })
+  simulation.force('link').links(links)
+  simulation.alphaTarget(0.7).restart()
+}
+// last but not least, we call updateSimulation
+// to trigger the initial render
+updateSimulation()
+});
+</script>
+</body>
+</html>
