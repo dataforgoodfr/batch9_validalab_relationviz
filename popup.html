@@ -1,65 +1,86 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<style>
-    h1, h6{
-        text-align:center
-    }
-    body{
-        width: 380px;
-        height:450px;
-        background-color: honeydew;
-    }
-    .limit{
-    word-wrap: break-word;
-}   
-    #put_link_12 {border: solid;}
-    #put_link_11 {border: solid;}
-    #put_link_2 {border: solid;font-size: smaller;}
-    #put_link_4 {border: solid;font-size: smaller;}
-    #put_link_5 {border: solid;font-size: smaller;}
-    #put_link_6 {border: solid;font-size: smaller;}
-    #put_link_7 {border: solid;font-size: smaller;}
-    #put_link_8 {border: solid;}
-    #put_link_9 {border: solid;}
-    #put_link_10 {border: solid;}
-    #put_1 {background-color:blue;}
-    #put_2 {background-color:red;}
-    #element1 {display:inline-block;margin-right:10px;} 
-    #element2 {display:inline-block;margin-right:10px;} 
-    #element4 {margin:5px;}
-    #element5 {margin:5px;}
-    #element6 {margin:5px;}
-    #put_link {display:inline-block; background-color:orange; border: solid;height:37px;}
-    #element3 {margin-right:10px; width:70px; background-color:blue; text-align:center}  
-</style>
-<div class="container">
-<div class="card " >
-    <div class="card-body">
-      <h2 id="element3">site</h2>  
-      <div class="logo-well" id="element1"><a href="\"><img src="icons/logo_validalab_48.png" alt="logo_validalab"></a></div>
-      <h3 class="card-link limit" id="put_link"></h3>
-      <h6 class="card-subtitle  text-muted" style="margin: 10px;">Lutte contre la desinformation</h6>
-      <!-- <p class="card-text mb-2" style="margin: 60px;">Vous visitez le site suivant:
-          <a class="card-link "><div class="card-link limit" id="put_link" style="color:#FF0000;"></div></a>
-      </p> -->
-      <div  id="put_link_6" ></div>
-      <div  id="put_link_7" > </div>
-      <div  id="put_link_12" > </div>
-      <div  id="put_link_2" ><p style="background-color:blueviolet;"> Wikipedia  <span id="put_link_3"> </span></p></div>
-      <div  id="put_link_8" ></div>
-      <div  id="put_link_9" ></div>
-      <div  id="put_link_10" ><div id="element4"><span id="put_1"><i class="fab fa-twitter fa-lg"></i></span><span id="where_to_insert"></span></div>
-            <div id="element5"><span id="put_2"><i class="fab fa-youtube fa-lg"></i></span><span id="where_to_insert_1"></span></div>
-            <div id="element6"><span id="put_3"><i class="fab fa-facebook fa-lg"></i></span><span id="where_to_insert_2"></span></div>
-      </div>
-      <div  id="put_link_5" ><p style="background-color:blueviolet;"> Lien Appartenance <span id="put_link_3"> </span></p></div>
-      <div  id="put_link_4" ><p style="background-color:blueviolet;"> Sites d'infos du meme proprietaire</p></div>
-      <div  id="put_link_11" ><p style="background-color:blueviolet;"> Sites Amis</p></div>
-      <div style="margin:60px"><a href="http://51.159.52.80:5000/" class="card-link" target="_blank">Visitez le site Validalab</a></div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card " >
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+              <div class="logo-well" id="element1"><a href="\"><img src="icons/logo_validalab_48.png" alt="logo_validalab"></a></div>
+            </div>
+            <div class="col-lg-4"></div>
+          </div>
+          
+          <h3 class="card-link limit" id="put_link"></h3>
+          
+          <!-- <p class="card-text mb-2" style="margin: 60px;">Vous visitez le site suivant:
+              <a class="card-link "><div class="card-link limit" id="put_link" style="color:#FF0000;"></div></a>
+          </p> -->
+          <div id="put_link_14"></div>
+          <div id="put_link_6"></div>
+          <div id="put_link_7"> </div>
+          <div id="put_link_3"> Recommandations</div>
+          <div  id="put_link_12" > 
+            <p id="pos_reco_content"></p>
+            <table class="table table-borderless" id="pos_reco_table"></table>
+          </div>
+          
+          <div  id="put_link_13" > 
+            <p id="neg_reco_content"></p>
+            <table class="table table-borderless" id="neg_reco_table"></table>
+          </div>
+          <div  id="put_link_15" > 
+            <p id="posneg_reco_content"></p>
+            <table class="table table-borderless" id="posneg_reco_table"></table>
+          </div>
+          <div id="put_link_2">
+            <div id="put_link_3"> Wikipedia</div>
+            <p id="summary_content"></p>
+          </div>
+    
+          <div id="put_link_8">
+            <div id="put_link_3"> Statistiques</div>
+            <p id="stats_content"></p>
+          </div>
+          <div id="put_link_9">
+            <p id="stats_pro_content"></p>
+          </div>
+          <div id="put_link_10">
+            <div id="put_link_3"> Réseaux sociaux</div>
+            <div id="element4"><span id="put_1"><i class="fab fa-twitter fa-lg"> </i></span> <span
+                id="where_to_insert"></span> </div>
+            <div id="element5"><span id="put_2"><i class="fab fa-youtube fa-lg"> </i></span> <span
+                id="where_to_insert_1"> </span></div>
+            <div id="element6"><span id="put_3"><i class="fab fa-facebook fa-lg"></i></span> <span
+                id="where_to_insert_2"> </span></div>
+          </div>
+          <div id="put_link_5">
+            <div id="put_link_3"> Propiétaires</div>
+            <p id="links_content"></p>
+          </div>
+          <div id="put_link_4">
+            <div id="put_link_3"> Sites d'infos du meme proprietaire</div>
+            <p id="owner_content"></p>
+          </div>
+          <div  id="put_link_11" >
+            <div id="put_link_3"> Sites Amis</div>
+          <p id="friends_content"></p></div>
+    
+          <div style="margin-left: 90px; margin-top: 20px; margin-bottom: 20px;"><a href="http://app.validalab.fr" class="card-link" target="_blank">Visitez Validalab</a></div>
+        </div>
     </div>
-</div>
-</div>
-<script src="app.js"></script> 
-<script src="background.js"></script> 
+    </div>
+    <script src="app.js"></script> 
+    
+</body>
+</html>
+
+
